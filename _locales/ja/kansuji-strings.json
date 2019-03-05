@@ -1,7 +1,7 @@
 {
   "kansuji|block": "漢数字",
-  "kansuji.showNumberJapaneseNumeral|block": "数を漢数字で表示 %n",
-  "kansuji.showNumberDayOfTheWeek|block": "数を漢数字で表示 %n",
-  "kansuji.showNumberDice|block": "数をサイコロで表示 %n",
-  "kansuji.showNumber2digits|block": "数を2ケタで表示 %v"
+  "kansuji.showNumberJapaneseNumeral|block": "漢数字で表示 %n",
+  "kansuji.showNumberDayOfTheWeek|block": "漢数字で表示 %n",
+  "kansuji.showNumberDice|block": "サイコロで表示 %n",
+  "kansuji.showNumber2digits|block": "2ケタで表示 %v"
 }
