@@ -1,5 +1,3 @@
-
-let rnd = 0
 let item = 0
 input.onButtonPressed(Button.A, function () {
     item += -1
@@ -11,59 +9,10 @@ input.onButtonPressed(Button.A, function () {
 input.onButtonPressed(Button.AB, function () {
     item = 0
     kansuji.showNumber2digits(item)
-    for (let カウンター = 0; カウンター <= 6; カウンター++) {
-        kansuji.showNumberDayOfTheWeek(カウンター)
+    for (let counter = 0; counter <= 6; counter++) {
+        kansuji.showNumberDayOfTheWeek(counter)
         basic.pause(100)
     }
-    basic.showLeds(`
-        # # # # #
-        # . . . #
-        # # # # #
-        # . . . #
-        # # # # #
-        `)
-    basic.showLeds(`
-        # # # # #
-        # . . # #
-        # # # . #
-        # # # # #
-        # . . . #
-        `)
-    basic.showLeds(`
-        # . # . #
-        # . # . #
-        . . # . .
-        . # . # .
-        # . . . #
-        `)
-    basic.showLeds(`
-        # . # . #
-        . # # . #
-        . # # # .
-        # . # # .
-        # . # . #
-        `)
-    basic.showLeds(`
-        . . # . .
-        # # # # #
-        . . # . .
-        . # # # .
-        # . # . #
-        `)
-    basic.showLeds(`
-        . . # . .
-        . # # # .
-        # . # . #
-        . # # # .
-        # # # # #
-        `)
-    basic.showLeds(`
-        . . # . .
-        . # # # .
-        . . # . .
-        . . # . .
-        # # # # #
-        `)
 })
 input.onPinPressed(TouchPin.P1, function () {
     item += -1
@@ -74,11 +23,10 @@ input.onPinPressed(TouchPin.P1, function () {
     kansuji.showNumberDayOfTheWeek(item)
 })
 input.onGesture(Gesture.Shake, function () {
-    // rnd = Math.floor(Math.random() * 6) + 1
-    rnd = Math.randomRange(1, 6)
-    kansuji.showNumber2digits(rnd)
-    basic.pause(200)
-    kansuji.showNumberDice(rnd)
+    for (let i = 0; i < 4; i++) {
+        basic.pause(100)
+        kansuji.showNumberDice(Math.randomRange(1, 6))
+    }
 })
 input.onPinPressed(TouchPin.P2, function () {
     item += 1
