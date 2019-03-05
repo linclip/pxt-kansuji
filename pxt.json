@@ -1,7 +1,7 @@
 {
     "name": "pxt-kansuji",
     "version": "0.0.2",
-    "description": "Japanese numeral (kansuuji) font",
+    "description": "Japanese numeral (kansuji) font",
     "dependencies": {
         "core": "*"
     },
@@ -12,5 +12,6 @@
     "testFiles": [
         "test.ts"
     ],
-    "public": false
+    "public": false,
+    "installedVersion": "workspace:864583fc-dae4-47c5-e215-89fb428e585e"
 }
