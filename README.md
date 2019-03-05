@@ -1,6 +1,6 @@
 # pxt-kansuji
 
-This is Japanese numeral () font for the micro:bit.
+This is Japanese numeral (kansuji: 漢数字) font for the micro:bit.
 
 ## Usage
 
