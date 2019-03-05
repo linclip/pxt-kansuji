@@ -1,10 +1,9 @@
 {
     "name": "pxt-kansuji",
-    "version": "0.0.0",
-    "description": "",
+    "version": "0.0.1",
+    "description": "Japanese numeral (kansuuji) font",
     "dependencies": {
-        "core": "*",
-        "radio": "*"
+        "core": "*"
     },
     "files": [
         "README.md",
@@ -13,6 +12,5 @@
     "testFiles": [
         "test.ts"
     ],
-    "public": false,
-    "additionalFilePaths": []
+    "public": false
 }
