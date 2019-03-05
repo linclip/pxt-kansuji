@@ -15,7 +15,7 @@ input.onButtonPressed(Button.B, () => {
     twodigit.showNumber(12)
 })
 ```
-### Day of th Week (0 to 6)
+### Day of the Week (0 to 6)
 
 ```blocks
 input.onButtonPressed(Button.A, () => {
@@ -47,6 +47,8 @@ input.onButtonPressed(Button.B, () => {
     kansuji.showNumber2digits(-9)
 })
 ```
+
+If you want more information, please go to our web site( http://pointofviewpoint.air-nifty.com/blog/2019/03/microbitextensi.html ).
 
 ## License
 
