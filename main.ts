@@ -1,4 +1,4 @@
-//% weight=100 color=#ff0000 icon="\u0023" block="Kansuji"
+//% weight=100 color=#ff0000 icon="\u0023" block="kansuji"
 namespace kansuji {
 
     const numDayOfTheWeek = [
