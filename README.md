@@ -1,8 +1,8 @@
-# pxt-kansuji
+# Kansuji Japanese numeral font
 
 This is Japanese numeral (kansuji: 漢数字) font for the micro:bit.
 
-## Usage
+In addition, this extension includes Japanese characters of 7 days, dice and 2-digit fonts that are frequently used in Japanese educational field.
 
 ## Code Example
 

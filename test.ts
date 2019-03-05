@@ -7,11 +7,9 @@ input.onButtonPressed(Button.A, function () {
     kansuji.showNumberJapaneseNumeral(item)
 })
 input.onButtonPressed(Button.AB, function () {
-    item = 0
-    kansuji.showNumber2digits(item)
-    for (let counter = 0; counter <= 6; counter++) {
-        kansuji.showNumberDayOfTheWeek(counter)
-        basic.pause(100)
+    for (let counter = 0; counter <= 39; counter++) {
+        kansuji.showNumber2digits(counter)
+        basic.pause(50)
     }
     item = 0
     kansuji.showNumberJapaneseNumeral(item)
@@ -21,7 +19,6 @@ input.onPinPressed(TouchPin.P1, function () {
     if (item < 0) {
         item = 0
     }
-    kansuji.showNumber2digits(item)
     kansuji.showNumberDayOfTheWeek(item)
 })
 input.onGesture(Gesture.Shake, function () {
@@ -42,12 +39,9 @@ input.onPinPressed(TouchPin.P2, function () {
     if (item > 6) {
         item = 6
     }
-    kansuji.showNumber2digits(item)
     kansuji.showNumberDayOfTheWeek(item)
 })
 item = 0
-kansuji.showNumber2digits(item)
-basic.pause(1000)
 kansuji.showNumberJapaneseNumeral(item)
 basic.forever(function () {
 
