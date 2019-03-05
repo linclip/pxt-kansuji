@@ -1,13 +1,14 @@
 {
     "name": "pxt-kansuji",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "Japanese numeral (kansuji) font",
     "dependencies": {
         "core": "*"
     },
     "files": [
         "README.md",
-        "main.ts"
+        "main.ts",
+        "_locales/ja/kansuji-strings.json"
     ],
     "testFiles": [
         "test.ts"
