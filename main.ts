@@ -1,5 +1,48 @@
-//% weight=100 color=#ff0000 icon="\u0023" block="kansuji"
+//% weight=100 color=#01dfd7 icon="\u0023" block="kansuji"
 namespace kansuji {
+
+    const numJapanese = [
+        ["01110", "10001", "10001", "10001", "01110"],   //0
+        ["00000", "00000", "11111", "00000", "00000"],   //1
+        ["01110", "00000", "00000", "00000", "11111"],   //2
+        ["01110", "00000", "01110", "00000", "11111"],   //3
+        ["11111", "10101", "11011", "10001", "11111"],   //4
+        ["11111", "00100", "01110", "00110", "11111"],   //5
+        ["00100", "11111", "00000", "01010", "10001"],   //6
+        ["01000", "11111", "01000", "01000", "01111"],   //7
+        ["01010", "01010", "01010", "10001", "10001"],   //8
+        ["01000", "11110", "01010", "01010", "01011"],   //9
+        ["00100", "00100", "11111", "00100", "00100"],   //10
+        ["01000", "11100", "01000", "00111", "00000"],   //11
+        ["01000", "11100", "01011", "00000", "00111"],   //12
+    ]
+    /**
+     * show number in Japanese Numeral (0 to 12)
+     * @param n describe value here, eg: 0
+     */
+    //% blockId=showNumberJapaneseNumeral block="Japanese Numeral %n"  weight=50
+    //% n.min=0 n.max=12 
+    export function showNumberJapaneseNumeral(n: number): void {
+        basic.clearScreen()
+        n = Math.floor(n)
+        if (n < 0 || n > 12) {
+            basic.showLeds(`
+            . . . . .
+            # # . # #
+            . . . . .
+            . # # # .
+            # . . . #
+            `)
+            return
+        }
+        for (let y = 0; y < 5; y++) {
+            for (let x = 0; x < 5; x++) {
+                if ((numJapanese[n][y]).substr(x, 1) == "1") {
+                    led.plot(x, y)
+                }
+            }
+        }
+    }
 
     const numDayOfTheWeek = [
         ["11111", "10001", "11111", "10001", "11111"],   //0 日
@@ -11,10 +54,11 @@ namespace kansuji {
         ["00100", "01110", "00100", "00100", "11111"],   //6 土
     ]
     /**
-     * show Day of the Week (0-6)
-     * @param n Day of the Week sun-sat (0-6), eg: 0
+     * show Day of the Week (0 to 6)
+     * @param n Day of the Week sun-sat, eg: 0
      */
-    //% blockId=showNumberDayOfTheWeek block="Day of the Week %n"
+    //% blockId=showNumberDayOfTheWeek block="Day of the Week %n" weight=30
+    //% n.min=0 n.max=6 
     export function showNumberDayOfTheWeek(n: number): void {
         basic.clearScreen()
         n = Math.floor(n)
@@ -39,17 +83,18 @@ namespace kansuji {
 
     const numDice = [
         ["00000", "00000", "00100", "00000", "00000"],   //1
-        ["00000", "01000", "00000", "00010", "00000"],   //2
-        ["10000", "00000", "00100", "00000", "00001"],   //3
+        ["00000", "00010", "00000", "01000", "00000"],   //2
+        ["00001", "00000", "00100", "00000", "10000"],   //3
         ["00000", "01010", "00000", "01010", "00000"],   //4
         ["10001", "00000", "00100", "00000", "10001"],   //5
         ["01010", "00000", "01010", "00000", "01010"],   //6
     ]
     /**
-     * show number in Dice (1-6)
+     * show number in Dice (1 to 6)
      * @param n describe value here, eg: 1
      */
-    //% blockId=showNumberDice block="Dice %n"
+    //% blockId=showNumberDice block="Dice %n"  weight=20
+    //% n.min=1 n.max=6 
     export function showNumberDice(n: number): void {
         basic.clearScreen()
         n = Math.floor(n)
@@ -72,49 +117,6 @@ namespace kansuji {
         }
     }
 
-
-    const numJapanese = [
-        ["01110", "10001", "10001", "10001", "01110"],   //0
-        ["00000", "00000", "11111", "00000", "00000"],   //1
-        ["01110", "00000", "00000", "00000", "11111"],   //2
-        ["01110", "00000", "01110", "00000", "11111"],   //3
-        ["11111", "10101", "11011", "10001", "11111"],   //4
-        ["11111", "00100", "01110", "00110", "11111"],   //5
-        ["00100", "11111", "00000", "01010", "10001"],   //6
-        ["01000", "11111", "01000", "01000", "01111"],   //7
-        ["01010", "01010", "01010", "10001", "10001"],   //8
-        ["01000", "11110", "01010", "01010", "01011"],   //9
-        ["00100", "00100", "11111", "00100", "00100"],   //10
-        ["01000", "11100", "01000", "00111", "00000"],   //11
-        ["01000", "11100", "01011", "00000", "00111"],   //12
-    ]
-    /**
-     * show number in Japanese Numeral
-     * @param n describe value here, eg: 0
-     */
-    //% blockId=showNumberJapaneseNumeral block="Japanese Numeral %n"
-    export function showNumberJapaneseNumeral(n: number): void {
-        basic.clearScreen()
-        n = Math.floor(n)
-        if (n < 0 || n > 12) {
-            basic.showLeds(`
-            . . . . .
-            # # . # #
-            . . . . .
-            . # # # .
-            # . . . #
-            `)
-            return
-        }
-        for (let y = 0; y < 5; y++) {
-            for (let x = 0; x < 5; x++) {
-                if ((numJapanese[n][y]).substr(x, 1) == "1") {
-                    led.plot(x, y)
-                }
-            }
-        }
-    }
-
     const numFont = [
         ["11", "11", "11", "11", "11"],   //0
         ["01", "01", "01", "01", "01"],   //1
@@ -130,10 +132,10 @@ namespace kansuji {
     ]
 
     /**
-     * show number in two digits
+     * show number in two digits (-9 to 99)
      * @param v describe value here, eg: 0
      */
-    //% blockId=showNumber2digits block="two digits  %v"
+    //% blockId=showNumber2digits block="two digits  %v"  weight=10
     export function showNumber2digits(v: number): void {
         basic.clearScreen()
         if (v < -9) {
